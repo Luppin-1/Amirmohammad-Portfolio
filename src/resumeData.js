@@ -1,14 +1,14 @@
 export const resume = {
   fa: {
     name: 'امیرمحمد احسانی',
-    initials: 'AE',
+    initials: 'AME',
     role: 'توسعه‌دهنده فرانت‌اند',
-    kicker: 'دانشجوی مهندسی کامپیوتر · حل‌کننده مسئله',
+    kicker: 'دانشجوی مهندسی‌کامپیوتر · حل‌کننده مسئله',
     availability: 'آماده همکاری به‌عنوان کارآموز فرانت‌اند',
-    intro: 'با React و JavaScript رابط‌های سریع، واکنش‌گرا و خوش‌ساخت می‌سازم و از تبدیل ایده‌های ساده به تجربه‌های واقعی وب لذت می‌برم.',
+    intro: 'با React و JavaScript رابط‌های کاربری سریع، زیبا و سازگار با انواع دستگاه‌ها طراحی می‌کنم و از تبدیل ایده‌ها به تجربه‌های واقعی و کاربردی در وب لذت می‌برم.',
     nav: ['درباره من', 'مهارت‌ها', 'مسیر من', 'پروژه‌ها', 'تماس'],
     labels: { about: 'داستان من', skills: 'ابزارهایی که با آن‌ها می‌سازم', experience: 'یادگیری و دستاوردها', projects: 'منتخب کارهای من', contact: 'بیایید با هم کار کنیم', courses: 'دوره‌ها و آموزش‌ها' },
-    stats: [['۱۲', 'مخزن عمومی'], ['رتبه ۱', 'مسابقه ICPC'], ['۶+', 'دوره تخصصی']],
+    stats: [['+۱۲', 'پروژه و مینی پروژه'], ['رتبه ۱', 'مسابقه برنامه نویسی'], ['۶+', 'دوره تخصصی']],
     about: [
       'دانشجوی ترم چهار مهندسی کامپیوتر دانشگاه سمنان هستم و مسیر حرفه‌ای خودم را روی توسعه فرانت‌اند متمرکز کرده‌ام. تجربه ساخت پروژه‌های شخصی با React، JavaScript و Tailwind CSS را دارم و آموخته‌هایم را پیوسته در گیت‌هاب به محصول قابل مشاهده تبدیل می‌کنم.',
       'کسب رتبه اول مسابقه برنامه‌نویسی ICPC درون‌دانشگاهی، علاقه من به حل مسئله و تفکر الگوریتمی را جدی‌تر کرد. حالا به دنبال فرصتی هستم تا در کنار یک تیم حرفه‌ای، روی پروژه‌های واقعی کار کنم و با بازخورد مستمر سریع‌تر رشد کنم.',
@@ -37,7 +37,7 @@ export const resume = {
     contact: [['ایمیل', 'amir85.ehsani12@gmail.com', 'mailto:amir85.ehsani12@gmail.com'], ['گیت‌هاب', 'github.com/Luppin-1', 'https://github.com/Luppin-1'], ['تلگرام', '@AmirMohammad_Ehsani', 'https://t.me/AmirMohammad_Ehsani'], ['موقعیت', 'سمنان، ایران', null]],
   },
   en: {
-    name: 'AmirMohammad Ehsani', initials: 'AE', role: 'Front-end Developer', kicker: 'Computer Engineering Student · Problem Solver',
+    name: 'AmirMohammad Ehsani', initials: 'AME', role: 'Front-end Developer', kicker: 'Computer Engineering Student · Problem Solver',
     availability: 'Open to front-end internship opportunities', intro: 'I build fast, responsive and thoughtfully crafted interfaces with React and JavaScript — turning simple ideas into tangible web experiences.',
     nav: ['About', 'Skills', 'Journey', 'Projects', 'Contact'],
     labels: { about: 'My story', skills: 'Tools I build with', experience: 'Learning and achievements', projects: 'Selected work', contact: "Let's work together", courses: 'Courses & training' },
