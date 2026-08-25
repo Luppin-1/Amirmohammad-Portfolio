@@ -1,6 +1,8 @@
+/* فونت‌های مورد استفاده در نسخه فارسی، انگلیسی، عنوان‌ها و اعداد */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&family=Vazirmatn:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
+/* تعریف نام‌های کوتاه فونت برای استفاده در کلاس‌های Tailwind */
 @theme {
   --font-vazir: "Vazirmatn", sans-serif;
   --font-inter: "Inter", sans-serif;
@@ -9,6 +11,7 @@
   --font-numbers: "IBM Plex Sans Arabic", "Vazirmatn", sans-serif;
 }
 
+/* تنظیمات عمومی صفحه و مقدار اولیه موقعیت موس */
 :root {
   --mouse-x: 50vw;
   --mouse-y: 50vh;
@@ -36,6 +39,7 @@ button {
   cursor: pointer;
 }
 
+/* متغیرهای رنگی تم تیره؛ در JSX با var(--نام) استفاده می‌شوند. */
 .theme-dark {
   --bg: #070914;
   --section: #090d1a;
@@ -47,6 +51,7 @@ button {
   color-scheme: dark;
 }
 
+/* متغیرهای رنگی تم روشن */
 .theme-light {
   --bg: #f6f8fc;
   --section: #eef2f9;
@@ -58,37 +63,45 @@ button {
   color-scheme: light;
 }
 
+/* حالت اولیه عناصر دارای انیمیشن هنگام اسکرول */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 700ms ease, transform 700ms cubic-bezier(.2, .7, .2, 1);
 }
 
+/* App هنگام دیده‌شدن عنصر، کلاس visible را به آن اضافه می‌کند. */
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
+/* حرکت نوار تکنولوژی‌های پایین Hero */
 @keyframes marquee {
   to { transform: translateX(-50%); }
 }
 
+/* کم و زیادشدن نور دور تصویر */
 @keyframes pulseGlow {
   50% { opacity: .52; transform: scale(1.05); }
 }
 
+/* حرکت عمودی کارت‌های آماری Hero */
 @keyframes float {
   50% { transform: translateY(-7px); }
 }
 
+/* چرخش حلقه دور تصویر */
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
 
+/* حرکت خطوط نوری پس‌زمینه */
 @keyframes beam {
   to { transform: translateX(150%); }
 }
 
+/* انیمیشن نوشته و خط لودر ابتدایی */
 @keyframes loaderPulse {
   50% { opacity: .5; }
 }
@@ -98,6 +111,7 @@ button {
   to { transform: translateX(340%); }
 }
 
+/* کاهش انیمیشن‌ها برای کاربرانی که این گزینه را در سیستم فعال کرده‌اند. */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
