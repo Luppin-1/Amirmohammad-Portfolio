@@ -2,7 +2,7 @@ export function Hero({ language, onContact }) {
   // این مقدار مشخص می‌کند کدام نسخه محتوایی نمایش داده شود.
   const isPersian = language === 'fa'
 
-  // مسیر پایه در Local برابر / و در GitHub Pages برابر /Resume-React/ است.
+  // مسیر پایه در Local برابر / و در GitHub Pages برابر /Amirmohammad-Portfolio/ است.
   const baseUrl = import.meta.env.BASE_URL
 
   // موارد داخل نوار متحرک پایین Hero
