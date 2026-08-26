@@ -2,6 +2,9 @@ export function Hero({ language, onContact }) {
   // این مقدار مشخص می‌کند کدام نسخه محتوایی نمایش داده شود.
   const isPersian = language === 'fa'
 
+  // مسیر پایه در Local برابر / و در GitHub Pages برابر /Resume-React/ است.
+  const baseUrl = import.meta.env.BASE_URL
+
   // موارد داخل نوار متحرک پایین Hero
   const technologies = ['React', 'JavaScript', 'Tailwind CSS', 'Vite', 'GitHub', 'C++', 'Problem Solving', 'Responsive Design', 'UI/UX Designer']
 
@@ -22,7 +25,7 @@ export function Hero({ language, onContact }) {
             <div className="absolute -inset-[25px] animate-[pulseGlow_3s_ease-in-out_infinite] rounded-full bg-[conic-gradient(from_30deg,#22d3ee,#a855f7,#f472b6,#22d3ee)] opacity-20 blur-[34px]" />
             <div className="absolute -inset-[17px] animate-[spin_12s_linear_infinite] rounded-full border border-transparent border-t-cyan-400/50 border-r-purple-500/20" />
             <div className="absolute inset-0 rounded-full bg-linear-to-br from-cyan-400 via-purple-500 to-pink-400 p-1">
-              <img className="h-full w-full rounded-full object-cover object-[50%_21%] saturate-75 transition duration-700 hover:scale-[1.035] hover:saturate-100" src="/amir-mohammad-ehsani.jpg" alt={isPersian ? 'امیرمحمد احسانی' : 'AmirMohammad Ehsani'} />
+              <img className="h-full w-full rounded-full object-cover object-[50%_21%] saturate-75 transition duration-700 hover:scale-[1.035] hover:saturate-100" src={`${baseUrl}amir-mohammad-ehsani.jpg`} alt={isPersian ? 'امیرمحمد احسانی' : 'AmirMohammad Ehsani'} />
             </div>
 
             {/* دو کارت آماری شناور روی تصویر */}
@@ -59,7 +62,7 @@ export function Hero({ language, onContact }) {
             </p>
             {/* دکمه دانلود رزومه و رفتن به بخش تماس */}
             <div className="flex w-full flex-wrap justify-center gap-2.5 min-[420px]:w-auto sm:gap-3.5 lg:justify-start">
-              <a className={`${buttonStyle} border-cyan-400/50 bg-cyan-400/8 text-cyan-400`} href="/AmirMohammad-Ehsani-Resume.pdf" download>
+              <a className={`${buttonStyle} border-cyan-400/50 bg-cyan-400/8 text-cyan-400`} href={`${baseUrl}AmirMohammad-Ehsani-Resume.pdf`} download>
                 ↓ {isPersian ? 'دانلود رزومه' : 'Download CV'}
               </a>
               <button className={`${buttonStyle} border-[var(--border)] text-[var(--text)]`} onClick={onContact}>

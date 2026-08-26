@@ -1,0 +1,53 @@
+name: Deploy portfolio to GitHub Pages
+
+# انتشار خودکار با هر Push روی شاخه master
+on:
+  push:
+    branches: ['master']
+  workflow_dispatch:
+
+# مجوزهای لازم برای انتشار روی GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# هم‌زمان فقط یک انتشار اجرا می‌شود.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Vite project
+        run: npm run build
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload production files
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: ./dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
