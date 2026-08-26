@@ -32,8 +32,6 @@ The production website is hosted on GitHub Pages and deployed automatically with
 - Tailwind CSS
 - React Icons
 - Git and GitHub
-- GitHub Actions
-- GitHub Pages
 
 ## Main Sections
 
@@ -45,14 +43,6 @@ The production website is hosted on GitHub Pages and deployed automatically with
 - Featured Projects
 - Contact Information
 
-## Featured Projects
-
-- Fashion Store
-- React Todo App
-- React Login Page
-- Restaurant Landing Page
-- Algorithm Practice
-- JavaScript Mini Projects
 
 Explore all repositories on my [GitHub profile](https://github.com/Luppin-1).
 
