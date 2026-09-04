@@ -6,7 +6,7 @@ export function Hero({ language, onContact }) {
   const baseUrl = import.meta.env.BASE_URL
 
   // موارد داخل نوار متحرک پایین Hero
-  const technologies = ['React', 'JavaScript', 'Tailwind CSS', 'Vite', 'GitHub', 'C++', 'Problem Solving', 'Responsive Design', 'UI/UX Designer']
+  const technologies = ['React', 'JavaScript', 'TypeScript', 'Tailwind CSS', 'React Router', 'GitHub', 'Component-based Design', 'UI/UX']
 
   // استایل مشترک دو دکمه Hero
   const buttonStyle = 'inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl border px-4 py-2.5 text-xs font-semibold transition duration-300 hover:-translate-y-1 min-[420px]:flex-none sm:min-h-12 sm:px-5 sm:py-3 sm:text-sm'
@@ -41,28 +41,36 @@ export function Hero({ language, onContact }) {
 
           {/* متن Hero */}
           <div dir={isPersian ? 'rtl' : 'ltr'} className={`reveal order-2 flex w-full max-w-[700px] flex-col items-center text-center lg:row-start-1 lg:items-start lg:text-start ${isPersian ? 'lg:col-start-2 lg:justify-self-end' : 'lg:col-start-1 lg:justify-self-start lg:pl-[clamp(24px,2.5vw,40px)]'}`}>
-            <div className="mb-4 inline-flex max-w-full items-center justify-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/5 px-3 py-1.5 text-center text-[10px] leading-5 font-semibold text-emerald-400 sm:mb-5 sm:text-xs">
+            <div className="mb-4 inline-flex max-w-full items-center justify-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/5 px-3 py-1.5 text-center text-xs leading-5 font-semibold text-emerald-400 sm:mb-5 sm:text-sm">
               <i className="h-2 w-2 rounded-full bg-emerald-400" />
-              {isPersian ? 'آماده همکاری به‌عنوان کارآموز فرانت‌اند' : 'Open to front-end internship opportunities'}
+              {isPersian ? 'آماده همکاری به‌عنوان توسعه‌دهنده جونیور فرانت‌اند' : 'Open to junior front-end opportunities'}
             </div>
             <h1 className={`bg-linear-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text font-display text-[clamp(34px,10vw,42px)] font-bold text-transparent sm:text-[46px] lg:text-[clamp(48px,5vw,70px)] xl:whitespace-nowrap ${isPersian ? 'pb-2 leading-[1.35]' : 'leading-[1.12]'}`}>
               {isPersian ? 'امیرمحمد احسانی' : 'AmirMohammad Ehsani'}
             </h1>
             <div className="mt-4 flex items-center gap-2.5 text-sm font-medium text-cyan-400 sm:mt-5 sm:text-[15px] lg:mt-7 lg:text-lg">
               <span className="h-px w-8 bg-cyan-400/50" />
-              {isPersian ? 'توسعه‌دهنده فرانت‌اند' : 'Front-end Developer'}
+              {isPersian ? 'توسعه‌دهنده جونیور فرانت‌اند' : 'Junior Front-End Developer'}
             </div>
             <div className="mt-2.5 text-[10px] leading-5 text-[var(--muted)] sm:mt-3 sm:text-xs">
               {isPersian ? 'دانشجوی مهندسی کامپیوتر · حل‌کننده مسئله' : 'Computer Engineering Student · Problem Solver'}
             </div>
             <p className="mt-4 mb-5 max-w-[680px] text-[13px] leading-7 text-[var(--muted)] sm:mt-5 sm:mb-6 sm:text-[15px] sm:leading-[1.9] lg:text-lg">
               {isPersian
-                ? 'با React و JavaScript رابط‌های کاربری سریع، زیبا و سازگار با انواع دستگاه‌ها طراحی می‌کنم و از تبدیل ایده‌ها به تجربه‌های واقعی و کاربردی در وب لذت می‌برم.'
-                : 'I build fast, responsive and thoughtfully crafted interfaces with React and JavaScript — turning simple ideas into tangible web experiences.'}
+                ? <>
+                    با تجربه بازطراحی کامل رابط کاربری سایت <bdi dir="ltr" className="inline-block font-semibold text-red-500">Cod24</bdi>{' '}، رابط‌های مدرن و رسپانسیو را با{' '}
+                    <bdi dir="ltr" className="inline-block">React</bdi>، <bdi dir="ltr" className="inline-block">TypeScript</bdi> و{' '}
+                    <bdi dir="ltr" className="inline-block">Tailwind CSS</bdi> طراحی و توسعه می‌دهم.
+                  </>
+                : <>
+                    With hands-on experience redesigning the complete{' '}
+                    <span dir="ltr" className="inline-block font-semibold text-red-500">Cod24</span>{' '}
+                    website interface, I build modern, responsive experiences with React, TypeScript and Tailwind CSS.
+                  </>}
             </p>
             {/* دکمه دانلود رزومه و رفتن به بخش تماس */}
             <div className="flex w-full flex-wrap justify-center gap-2.5 min-[420px]:w-auto sm:gap-3.5 lg:justify-start">
-              <a className={`${buttonStyle} border-cyan-400/50 bg-cyan-400/8 text-cyan-400`} href={`${baseUrl}AmirMohammad-Ehsani-Resume.pdf`} download>
+              <a className={`${buttonStyle} border-cyan-400/50 bg-cyan-400/8 text-cyan-400`} href={`${baseUrl}${isPersian ? 'AmirMohammad-Ehsani-Resume-FA.pdf' : 'AmirMohammad-Ehsani-Resume-EN.pdf'}`} download>
                 ↓ {isPersian ? 'دانلود رزومه' : 'Download CV'}
               </a>
               <button className={`${buttonStyle} border-[var(--border)] text-[var(--text)]`} onClick={onContact}>
@@ -82,7 +90,12 @@ export function Hero({ language, onContact }) {
       {/* نوار تکنولوژی‌ها به Hero متصل است و فایل جدا ندارد. */}
       <div className="overflow-hidden border-y border-[var(--border)] bg-[var(--surface)] py-4" aria-hidden="true">
         <div className="flex w-max animate-[marquee_28s_linear_infinite] whitespace-nowrap">
-          {[...technologies, ...technologies].map((item, index) => <span className="flex items-center gap-6 px-6 font-mono text-xs text-[var(--muted)]" key={`${item}-${index}`}>{item}<b className="text-cyan-400">✦</b></span>)}
+          {[...technologies, ...technologies].map((item, index) => (
+            <span className="flex items-center gap-4 px-3 font-mono text-xs text-[var(--muted)]" key={`${item}-${index}`}>
+              {item}
+              <b className="text-cyan-400">✦</b>
+            </span>
+          ))}
         </div>
       </div>
     </>

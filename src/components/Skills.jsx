@@ -4,20 +4,20 @@ export function Skills({ language }) {
   // هر آرایه شامل نام یک گروه و مهارت‌های داخل آن است.
   const groups = isPersian
     ? [
-        ['هسته فرانت‌اند', ['HTML5', 'CSS3', 'JavaScript', 'React']],
+        ['هسته فرانت‌اند', ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React']],
         ['رابط کاربری', ['Tailwind CSS', 'Responsive UI', 'Dark Mode', 'Component UI']],
-        ['React و ابزارها', ['React Hooks', 'State Management', 'Vite', 'Git']],
+        ['React و ارتباط با API', ['React Hooks', 'React Router', 'Axios', 'Vite']],
         ['برنامه‌نویسی', ['C++', 'Python', 'Kotlin', 'Algorithms']],
-        ['همکاری و انتشار', ['GitHub', 'GitLab', 'Version Control', 'Deployment']],
-        ['توانمندی‌ها', ['Problem Solving', 'Async JavaScript', 'Clean Code', 'English']],
+        ['همکاری و کیفیت کد', ['Git', 'GitHub', 'ESLint', 'Prettier']],
+        ['توانمندی‌ها', ['Responsive Design', 'Component Design', 'Problem Solving', 'English']],
       ]
     : [
-        ['Front-end core', ['HTML5', 'CSS3', 'JavaScript', 'React']],
+        ['Front-end core', ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React']],
         ['Interface design', ['Tailwind CSS', 'Responsive UI', 'Dark Mode', 'Component UI']],
-        ['React & tooling', ['React Hooks', 'State Management', 'Vite', 'Git']],
+        ['React & API', ['React Hooks', 'React Router', 'Axios', 'Vite']],
         ['Programming', ['C++', 'Python', 'Kotlin', 'Algorithms']],
-        ['Collaboration', ['GitHub', 'GitLab', 'Version Control', 'Deployment']],
-        ['Strengths', ['Problem Solving', 'Async JavaScript', 'Clean Code', 'English']],
+        ['Workflow & quality', ['Git', 'GitHub', 'ESLint', 'Prettier']],
+        ['Strengths', ['Responsive Design', 'Component Design', 'Problem Solving', 'English']],
       ]
 
   // رنگ اختصاصی هر کارت؛ ترتیب این آرایه با ترتیب groups یکسان است.

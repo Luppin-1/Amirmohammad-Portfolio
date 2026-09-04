@@ -8,8 +8,8 @@ export function Contact({ language }) {
   const eyebrow = isPersian ? 'بیایید با هم کار کنیم' : "Let's work together"
   const title = isPersian ? 'در تماس باشیم' : 'Get in touch'
   const description = isPersian
-    ? 'اگر برای موقعیت کارآموزی فرانت‌اند، همکاری روی پروژه یا گفت‌وگو درباره یک ایده دنبال نیروی مشتاق هستید، خوشحال می‌شوم با شما صحبت کنم.'
-    : 'If you are hiring a motivated front-end intern, collaborating on a project, or exploring an idea, I would love to hear from you.'
+    ? 'اگر به دنبال توسعه‌دهنده جونیور فرانت‌اند برای ساخت رابط‌های مدرن و رسپانسیو هستید، خوشحال می‌شوم درباره موقعیت شغلی یا همکاری روی یک پروژه با شما گفت‌وگو کنم.'
+    : 'If you are looking for a Junior Front-End Developer to build modern, responsive interfaces, I would be glad to discuss a role or project with you.'
 
   // اطلاعات، لوگو و رنگ اختصاصی هر کارت
   const contacts = [
@@ -34,7 +34,7 @@ export function Contact({ language }) {
       color: 'text-cyan-400', border: 'border-cyan-400/20 hover:border-cyan-400/50', iconBox: 'border-cyan-400/30 bg-cyan-400/8', accent: 'bg-cyan-400', shadow: 'hover:shadow-[0_22px_65px_rgba(34,211,238,.11)]',
     },
     {
-      label: isPersian ? 'موقعیت مکانی' : 'Location', value: isPersian ? 'سمنان، ایران' : 'Semnan, Iran', href: null, icon: <FiMapPin />,
+      label: isPersian ? 'موقعیت مکانی' : 'Location', value: isPersian ? 'تهران، ایران' : 'Tehran, Iran', href: null, icon: <FiMapPin />,
       color: 'text-blue-400', border: 'border-blue-400/20 hover:border-blue-400/50', iconBox: 'border-blue-400/30 bg-blue-400/8', accent: 'bg-blue-400', shadow: 'hover:shadow-[0_22px_65px_rgba(96,165,250,.11)]',
     },
   ]

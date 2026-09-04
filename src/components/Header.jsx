@@ -1,3 +1,5 @@
+import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi'
+
 // شناسه هر بخش برای حرکت منو به همان قسمت استفاده می‌شود.
 const sectionIds = ['about', 'skills', 'experience', 'projects', 'contact']
 
@@ -10,7 +12,7 @@ export function Header({ language, isDark, isMenuOpen, onNavigate, onLanguageCha
     : ['About', 'Skills', 'Journey', 'Projects', 'Contact']
 
   // کلاس مشترک دکمه‌های تم و منوی موبایل
-  const iconButtonStyle = 'grid h-8 w-8 place-items-center rounded-lg text-base text-[var(--muted)] transition hover:bg-cyan-400/8 hover:text-cyan-400 sm:h-9 sm:w-9 sm:text-lg'
+  const iconButtonStyle = 'grid h-8 w-8 place-items-center rounded-lg leading-none text-[var(--muted)] transition hover:bg-cyan-400/8 hover:text-cyan-400 sm:h-9 sm:w-9'
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 h-16 border-b border-slate-400/10 bg-[color-mix(in_srgb,var(--bg)_76%,transparent)] backdrop-blur-2xl">
@@ -35,8 +37,12 @@ export function Header({ language, isDark, isMenuOpen, onNavigate, onLanguageCha
         {/* دکمه‌های تغییر زبان، تم و بازکردن منوی موبایل */}
         <div className="flex items-center gap-1">
           <button className="rounded-lg px-2 py-2 font-mono text-[11px] font-bold text-[var(--muted)] hover:text-cyan-400 sm:px-2.5 sm:text-xs" onClick={onLanguageChange}>{isPersian ? 'EN' : 'FA'}</button>
-          <button className={iconButtonStyle} onClick={onThemeChange} aria-label="Toggle theme">{isDark ? '☀' : '☾'}</button>
-          <button className={`${iconButtonStyle} md:hidden`} onClick={onMenuChange} aria-label="Menu">{isMenuOpen ? '×' : '☰'}</button>
+          <button className={iconButtonStyle} onClick={onThemeChange} aria-label="Toggle theme">
+            {isDark ? <FiSun className="h-[18px] w-[18px]" aria-hidden="true" /> : <FiMoon className="h-[18px] w-[18px]" aria-hidden="true" />}
+          </button>
+          <button className={`${iconButtonStyle} md:hidden`} onClick={onMenuChange} aria-label="Menu">
+            {isMenuOpen ? <FiX className="h-[18px] w-[18px]" aria-hidden="true" /> : <FiMenu className="h-[18px] w-[18px]" aria-hidden="true" />}
+          </button>
         </div>
       </nav>
     </header>

@@ -4,18 +4,20 @@ export function Journey({ language }) {
   // اطلاعات مسیر تحصیلی، دستاوردها و دوره‌ها در این شیء قرار دارد.
   const content = isPersian
     ? {
-        eyebrow: 'یادگیری و دستاوردها', title: 'مسیر من', coursesTitle: 'دوره‌ها و آموزش‌ها',
+        eyebrow: 'تجربه، یادگیری و دستاوردها', title: 'مسیر من', coursesTitle: 'دوره‌ها و آموزش‌ها',
         experiences: [
-          { title: 'کارشناسی مهندسی نرم‌افزار', company: 'دانشگاه سمنان', date: '۱۴۰۳ — اکنون', location: 'سمنان', points: ['دانشجوی ترم پنج مهندسی کامپیوتر با تمرکز بر توسعه نرم‌افزار و فرانت‌اند', 'تمرین مستمر مبانی برنامه‌نویسی، الگوریتم و ساختمان داده', 'توسعه پروژه‌های مستقل در کنار مسیر دانشگاهی'] },
+          { title: 'کارآموز توسعه فرانت‌اند', company: 'Cod24', date: 'تیر ۱۴۰۵ — اکنون', location: 'سمنان', points: ['بازطراحی و توسعه کامل رابط کاربری وب‌سایت با React و Tailwind CSS', 'ساخت کامپوننت‌های قابل استفاده مجدد با JavaScript و TypeScript', 'پیاده‌سازی React Router، اتصال به سرویس‌های بک‌اند با Axios و همکاری با تیم پروژه'] },
+          { title: 'کارشناسی مهندسی کامپیوتر', company: 'دانشگاه سمنان', date: '۱۴۰۳ — تابستان ۱۴۰۷', location: 'سمنان', points: ['تمرکز بر توسعه نرم‌افزار و فرانت‌اند', 'تمرین مستمر مبانی برنامه‌نویسی، الگوریتم و ساختمان داده', 'توسعه پروژه‌های مستقل در کنار مسیر دانشگاهی'] },
           { title: 'رتبه اول مسابقه برنامه‌نویسی ', company: 'مسابقه درون‌دانشگاهی - تیمی', date: 'دستاورد دانشگاهی', location: 'دانشگاه سمنان', points: ['حل مسائل الگوریتمی در محدودیت زمانی', 'تقویت تحلیل مسئله، کار تیمی و پیاده‌سازی راه‌حل با C++', 'کسب مقام نخست در رقابت درون‌دانشگاهی'] },
           { title: 'مسیر توسعه فرانت‌اند', company: 'یادگیری پروژه‌محور و گیت‌هاب', date: 'فعال و در حال رشد', location: 'مستقل', points: ['ساخت پروژه‌های React با معماری کامپوننتی و Hooks', 'طراحی رابط‌های واکنش‌گرا با Tailwind CSS و CSS', 'انتشار و به‌روزرسانی ۱۲ پروژه در GitHub'] },
         ],
         courses: [['React با Vite', 'تاپلرن'], ['Tailwind CSS', 'فرادرس'], ['Asynchronous JavaScript', 'مکتب‌خونه'], ['HTML, CSS و JavaScript پروژه‌محور', 'مکتب‌خونه'], ['توسعه اندروید با Kotlin', 'مکتب‌خونه'], ['مبانی C++ - دوره ۶ ماهه', 'مجتمع فنی تهران']],
       }
     : {
-        eyebrow: 'Learning and achievements', title: 'My journey', coursesTitle: 'Courses & training',
+        eyebrow: 'Experience, learning and achievements', title: 'My journey', coursesTitle: 'Courses & training',
         experiences: [
-          { title: 'B.Sc. in Software Engineering', company: 'Semnan University', date: '2024 — Present', location: 'Semnan, Iran', points: ['Fourth-semester Computer Engineering student focused on software and front-end development', 'Continuous practice in programming fundamentals, algorithms and data structures', 'Building independent products alongside academic studies'] },
+          { title: 'Front-End Developer Intern', company: 'Cod24', date: 'Jul 2026 — Present', location: 'Semnan, Iran', points: ['Redesigned and developed the complete website interface with React and Tailwind CSS', 'Built reusable components with JavaScript and TypeScript', 'Implemented React Router, integrated back-end services with Axios and collaborated with the project team'] },
+          { title: 'B.Sc. in Computer Engineering', company: 'Semnan University', date: '2024 — Summer 2028', location: 'Semnan, Iran', points: ['Focused on software and front-end development', 'Continuous practice in programming fundamentals, algorithms and data structures', 'Building independent products alongside academic studies'] },
           { title: '1st Place - ICPC Programming Contest', company: 'Internal university team competition', date: 'Academic achievement', location: 'Semnan University', points: ['Solved algorithmic problems under time constraints', 'Strengthened analytical thinking, teamwork and C++ implementation', 'Ranked first in the internal university contest'] },
           { title: 'Front-end Development Track', company: 'Project-based learning and GitHub', date: 'Active and growing', location: 'Independent', points: ['Built React projects using component architecture and Hooks', 'Designed responsive interfaces with Tailwind CSS and vanilla CSS', 'Published and maintained 12 public GitHub repositories'] },
         ],

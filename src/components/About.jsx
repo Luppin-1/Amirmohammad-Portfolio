@@ -6,18 +6,18 @@ export function About({ language }) {
     ? {
         eyebrow: 'من کی هستم', title: 'درباره من',
         paragraphs: [
-          'دانشجوی ترم پنج مهندسی کامپیوتر دانشگاه سمنان هستم و مسیر حرفه‌ای خودم را روی توسعه فرانت‌اند متمرکز کرده‌ام. تجربه ساخت پروژه‌های شخصی با React، JavaScript و Tailwind CSS را دارم و آموخته‌هایم را پیوسته در گیت‌هاب به پروژه‌ قابل مشاهده تبدیل می‌کنم.',
-          'کسب رتبه اول مسابقه برنامه‌نویسی درون‌دانشگاهی، علاقه من به حل مسئله و تفکر الگوریتمی را جدی‌تر کرد. حالا به دنبال فرصتی هستم تا در کنار یک تیم حرفه‌ای، روی پروژه‌‌های واقعی کار کنم و با بازخورد مستمر سریع‌تر رشد کنم.',
+          'دانشجوی مهندسی کامپیوتر دانشگاه سمنان و کارآموز توسعه فرانت‌اند در Cod24 هستم. در این دوره، بازطراحی کامل رابط کاربری سایت را با React، JavaScript، TypeScript و Tailwind CSS انجام داده‌ام و تجربه کار روی یک محصول واقعی را به دست آورده‌ام.',
+          'در کنار همکاری با توسعه‌دهنده بک‌اند و مدیر پروژه، روی ساخت کامپوننت‌های قابل استفاده مجدد، طراحی واکنش‌گرا، اتصال به API و کیفیت کد تمرکز داشته‌ام. اکنون به دنبال موقعیت توسعه‌دهنده جونیور فرانت‌اند هستم تا این تجربه را در یک تیم حرفه‌ای ادامه دهم.',
         ],
-        stats: [['۱۲+', 'پروژه و مینی پروژه'], ['رتبه ۱', 'مسابقه برنامه‌نویسی'], ['۶+', 'دوره تخصصی']],
+        stats: [['۱۲+', 'پروژه و مینی پروژه'], ['cod24', 'تجربه پروژه واقعی'], ['رتبه ۱', 'مسابقه برنامه‌نویسی']],
       }
     : {
         eyebrow: 'My story', title: 'About me',
         paragraphs: [
-          'I am a fourth-semester Computer Engineering student at Semnan University, focused on front-end development. I build personal projects with React, JavaScript and Tailwind CSS, consistently turning what I learn into visible work on GitHub.',
-          'Winning first place in an internal programming competition deepened my interest in problem solving and algorithmic thinking. I am now looking for an opportunity to contribute to real products, learn from a professional team and grow quickly through feedback.',
+          'I am a Computer Engineering student at Semnan University and a Front-End Developer Intern at Cod24. During this internship, I redesigned and developed the complete website interface with React, JavaScript, TypeScript and Tailwind CSS, gaining hands-on experience on a real product.',
+          'I have worked closely with a back-end developer and project manager while focusing on reusable components, responsive design, API integration and code quality. I am now seeking a Junior Front-End Developer role where I can contribute and continue growing within a professional team.',
         ],
-        stats: [['12+', 'Public repositories'], ['1st', 'ICPC competition'], ['6+', 'Technical courses']],
+        stats: [['12+', 'Public repositories'], ['cod24', 'Complete website redesign'], ['1st', 'ICPC competition']],
       }
 
   return (
@@ -36,7 +36,7 @@ export function About({ language }) {
 
         {/* کارت‌های آماری پایین بخش */}
         <div className="reveal mt-9 grid overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] min-[480px]:grid-cols-3 sm:mt-12">
-          {content.stats.map(([number, label]) => <div className="flex flex-col items-center border-b border-[var(--border)] px-4 py-5 text-center last:border-0 min-[480px]:border-e min-[480px]:border-b-0 sm:px-5 sm:py-7" key={label}><strong className="font-numbers text-2xl text-cyan-400 sm:text-3xl">{number}</strong><span className="mt-1.5 text-[10px] text-[var(--muted)] sm:mt-2 sm:text-xs">{label}</span></div>)}
+          {content.stats.map(([number, label]) => <div className="flex flex-col items-center border-b border-[var(--border)] px-4 py-5 text-center last:border-0 min-[480px]:border-e min-[480px]:border-b-0 sm:px-5 sm:py-7" key={label}><strong className="font-numbers text-xl text-cyan-400 sm:text-2xl">{number}</strong><span className="mt-1.5 text-[10px] text-[var(--muted)] sm:mt-2 sm:text-xs">{label}</span></div>)}
         </div>
 
       </div>
